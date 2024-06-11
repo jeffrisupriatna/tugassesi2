@@ -1,109 +1,88 @@
-@extends('index')
-@section('main')
-<section class="vh-100 gradient-custom" style="margin-top:100px">
-    <div class="container py-5 h-100">
-      <div class="row justify-content-center align-items-center h-100">
-        <div class="col-12 col-lg-9 col-xl-7">
-          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
-            <div class="card-body p-4 p-md-5">
-              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
-              <form>
-  
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-  
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="firstName" class="form-control form-control-lg" />
-                      <label class="form-label" for="firstName">First Name</label>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Register - SB Admin</title>
+        <link href="{{ asset('sb/css/styles.css') }}" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-primary">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                                        <label for="inputFirstName">First name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating">
+                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                                        <label for="inputLastName">Last name</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
+                                                <label for="inputEmail">Email address</label>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input class="form-control" id="inputPassword" type="password" placeholder="Create a password" />
+                                                        <label for="inputPassword">Password</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input class="form-control" id="inputPasswordConfirm" type="password" placeholder="Confirm password" />
+                                                        <label for="inputPasswordConfirm">Confirm Password</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-4 mb-0">
+                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Create Account</a></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-center py-3">
+                                        <div class="small"><a href="login.html">Have an account? Go to login</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-  
-                  </div>
-                  <div class="col-md-6 mb-4">
-  
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="lastName" class="form-control form-control-lg" />
-                      <label class="form-label" for="lastName">Last Name</label>
-                    </div>
-  
-                  </div>
-                </div>
-  
-                <div class="row">
-                  <div class="col-md-6 mb-4 d-flex align-items-center">
-  
-                    <div data-mdb-input-init class="form-outline datepicker w-100">
-                      <input type="text" class="form-control form-control-lg" id="birthdayDate" />
-                      <label for="birthdayDate" class="form-label">Birthday</label>
-                    </div>
-  
-                  </div>
-                  <div class="col-md-6 mb-4">
-  
-                    <h6 class="mb-2 pb-1">Gender: </h6>
-  
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                        value="option1" checked />
-                      <label class="form-check-label" for="femaleGender">Female</label>
-                    </div>
-  
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                        value="option2" />
-                      <label class="form-check-label" for="maleGender">Male</label>
-                    </div>
-  
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
-                        value="option3" />
-                      <label class="form-check-label" for="otherGender">Other</label>
-                    </div>
-  
-                  </div>
-                </div>
-  
-                <div class="row">
-                  <div class="col-md-6 mb-4 pb-2">
-  
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="email" id="emailAddress" class="form-control form-control-lg" />
-                      <label class="form-label" for="emailAddress">Email</label>
-                    </div>
-  
-                  </div>
-                  <div class="col-md-6 mb-4 pb-2">
-  
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
-                      <label class="form-label" for="phoneNumber">Phone Number</label>
-                    </div>
-  
-                  </div>
-                </div>
-  
-                <div class="row">
-                  <div class="col-12">
-  
-                    <select class="select form-control-lg">
-                      <option value="1" disabled>Choose option</option>
-                      <option value="2">Subject 1</option>
-                      <option value="3">Subject 2</option>
-                      <option value="4">Subject 3</option>
-                    </select>
-                    <label class="form-label select-label">Choose option</label>
-  
-                  </div>
-                </div>
-  
-                <div class="mt-4 pt-2">
-                  <input data-mdb-ripple-init class="btn btn-primary btn-lg" type="submit" value="Submit" />
-                </div>
-  
-              </form>
+                </main>
             </div>
-          </div>
+            <div id="layoutAuthentication_footer">
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-@endsection
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="{{ asset('sb/js/scripts.js') }}"></script>
+    </body>
+</html>
